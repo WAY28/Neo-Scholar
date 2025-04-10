@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NeoScholar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Neo<span>Scholar</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="index.html#features" class="nav-link">Fitur</a></li>
+                    <li><a href="index.html#categories" class="nav-link">Kategori</a></li>
+                    <li><a href="index.html#about" class="nav-link">Tentang</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-container">
+        <div class="login-card">
+            <h2 class="login-title">Login ke NeoScholar</h2>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email / Username</label>
+                    <input type="text" id="email" class="form-input" placeholder="Masukkan email atau username" required>
+                    <div id="emailError" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-input" placeholder="Masukkan password" required>
+                    <div id="passwordError" class="error-message"></div>
+                </div>
+                <a href="#" class="forgot-password">Lupa Password?</a>
+                <button type="submit" id="loginBtn" class="login-button">Login</button>
+                <div id="loginMessage" class="login-message"></div>
+            </form>
+
+            <div class="login-divider">
+                <span class="login-divider-text">atau login dengan</span>
+            </div>
+
+            <div class="social-login">
+                <a href="#" class="social-login-btn">
+                    <i class="fab fa-google social-login-icon google-icon"></i>
+                    <span>Google</span>
+                </a>
+                <a href="#" class="social-login-btn">
+                    <i class="fab fa-microsoft social-login-icon microsoft-icon"></i>
+                    <span>Microsoft</span>
+                </a>
+            </div>
+
+            <div class="register-link">
+                <p>Belum punya akun? <a href="#">Daftar Pengguna Baru</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>NeoScholar</h3>
+                    <p>Platform edukasi masa depan dengan pendekatan inovatif untuk mempersiapkan generasi penerus.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Cepat</h3>
+                    <a href="#" class="footer-link">Tentang Kami</a>
+                    <a href="#" class="footer-link">Fitur</a>
+                    <a href="#" class="footer-link">Kategori</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">FAQ</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <a href="#" class="footer-link"><i class="fas fa-map-marker-alt"></i> Jl. Pendidikan No. 123, Jakarta</a>
+                    <a href="#" class="footer-link"><i class="fas fa-phone"></i> +62 812 3456 7890</a>
+                    <a href="#" class="footer-link"><i class="fas fa-envelope"></i> info@neoscholar.id</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NeoScholar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Login form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const loginMessage = document.getElementById('loginMessage');
+
+            // Add CSS for error messages and success/failure messages
+            document.head.insertAdjacentHTML('beforeend', `
+                <style>
+                    .error-message {
+                        color: #ff3b30;
+                        font-size: 0.8rem;
+                        margin-top: 5px;
+                        min-height: 16px;
+                    }
+                    .login-message {
+                        text-align: center;
+                        margin-top: 10px;
+                        padding: 6px;
+                        border-radius: 4px;
+                        font-size: 0.9rem;
+                        transition: all 0.3s ease;
+                    }
+                    .login-message.success {
+                        background-color: #e8f5e9;
+                        color: #2e7d32;
+                    }
+                    .login-message.error {
+                        background-color: #ffebee;
+                        color: #c62828;
+                    }
+                    .shake {
+                        animation: shake 0.5s;
+                    }
+                    @keyframes shake {
+                        0%, 100% { transform: translateX(0); }
+                        10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                        20%, 40%, 60%, 80% { transform: translateX(5px); }
+                    }
+                </style>
+            `);
+
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Reset error messages
+                emailError.textContent = '';
+                passwordError.textContent = '';
+                loginMessage.textContent = '';
+                loginMessage.className = 'login-message';
+                
+                let isValid = true;
+                
+                // Simple validation
+                if (!emailInput.value.trim()) {
+                    emailError.textContent = 'Email/username tidak boleh kosong';
+                    emailInput.classList.add('shake');
+                    setTimeout(() => emailInput.classList.remove('shake'), 500);
+                    isValid = false;
+                }
+                
+                if (!passwordInput.value.trim()) {
+                    passwordError.textContent = 'Password tidak boleh kosong';
+                    passwordInput.classList.add('shake');
+                    setTimeout(() => passwordInput.classList.remove('shake'), 500);
+                    isValid = false;
+                } else if (passwordInput.value.length < 6) {
+                    passwordError.textContent = 'Password minimal 6 karakter';
+                    passwordInput.classList.add('shake');
+                    setTimeout(() => passwordInput.classList.remove('shake'), 500);
+                    isValid = false;
+                }
+                
+                // If validation passes, process login
+                if (isValid) {
+                    // Simulasi login (dalam aplikasi nyata, ini akan melibatkan autentikasi server)
+                    // Untuk demo, kita gunakan login sederhana
+                    const validUsername = 'pengguna@neoscholar.id';
+                    const validPassword = 'password123';
+                    
+                    // Atau terima input apapun dengan panjang tertentu
+                    const isSimpleValidation = emailInput.value.trim().length > 3 && 
+                                              passwordInput.value.trim().length >= 6;
+                    
+                    if (emailInput.value === validUsername && passwordInput.value === validPassword || 
+                        isSimpleValidation) {
+                        // Success - Show message and redirect
+                        loginMessage.textContent = 'Login berhasil! Mengalihkan ke Dashboard...';
+                        loginMessage.classList.add('success');
+                        
+                        // Menyimpan info user di localStorage (simulasi sesi)
+                        localStorage.setItem('userLoggedIn', 'true');
+                        localStorage.setItem('username', emailInput.value.split('@')[0]);
+                        
+                        // Redirect setelah delay singkat
+                        setTimeout(() => {
+                            window.location.href = 'dashboard.html';
+                        }, 1500);
+                    } else {
+                        // Failed login
+                        loginMessage.textContent = 'Login gagal. Silakan periksa email dan password Anda.';
+                        loginMessage.classList.add('error');
+                        loginForm.classList.add('shake');
+                        setTimeout(() => loginForm.classList.remove('shake'), 500);
+                    }
+                }
+            });
+
+            // Reset form fields when error comes up
+            emailInput.addEventListener('input', () => {
+                emailError.textContent = '';
+            });
+            
+            passwordInput.addEventListener('input', () => {
+                passwordError.textContent = '';
+            });
+
+            // Social login buttons (demo only - redirect to dashboard)
+            const socialButtons = document.querySelectorAll('.social-login-btn');
+            socialButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    loginMessage.textContent = 'Login melalui sosial media diproses...';
+                    loginMessage.classList.add('success');
+                    
+                    // Menyimpan info user di localStorage (simulasi sesi)
+                    localStorage.setItem('userLoggedIn', 'true');
+                    localStorage.setItem('username', 'Pengguna');
+                    
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
