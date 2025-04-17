@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Mentor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Neo<span>Scholar</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html#product" class="nav-link">Produk</a></li>
+                    <li><a href="index.html#mentor" class="nav-link">Mentor</a></li>
+                    <li><a href="index.html#categories" class="nav-link">Kategori</a></li>
+                    <li><a href="pendaftaranmentor.html" class="nav-link">Pendaftaran Mentor</a></li>
+                    <li><a href="jualproduk.html" class="nav-link">Jual Produk</a></li>
+                    <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+                    <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                    <li><a href="login.html" class="btn btn-primary">Login</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="section-title">Form Pendaftaran Mentor</h1>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi Singkat</label>
+                    <textarea id="deskripsi" class="form-input" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="foto">Upload CV</label>
+                    <input type="file" id="foto" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="foto">Foto Diri</label>
+                    <input type="file" id="foto" class="form-input">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

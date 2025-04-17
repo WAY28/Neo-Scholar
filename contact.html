@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - NeoScholar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="Logo NS.png" alt="NeoScholar Logo">
+                    Neo<span>Scholar</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#product" class="nav-link">Produk</a></li>
+                    <li><a href="#mentor" class="nav-link">Mentor</a></li>
+                    <li><a href="#categories" class="nav-link">Kategori</a></li>
+                    <li><a href="pendaftaranmentor.html" class="nav-link">Pendaftaran Mentor</a></li>
+                    <li><a href="jualproduk.html" class="nav-link">Jual Produk</a></li>
+                    <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+                    <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                    <li><a href="login.html" class="btn btn-primary">Login</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-hero-title">Hubungi Kami</h1>
+                <p class="page-hero-subtitle">Kami siap membantu dan menjawab pertanyaan Anda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2 class="contact-title">Kirim Pesan</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nama Lengkap*</label>
+                            <input type="text" id="name" class="form-input" placeholder="Masukkan nama lengkap Anda" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" id="email" class="form-input" placeholder="Masukkan alamat email Anda" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subjek*</label>
+                            <input type="text" id="subject" class="form-input" placeholder="Subjek pesan Anda" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Pesan*</label>
+                            <textarea id="message" class="form-textarea" placeholder="Tulis pesan Anda di sini..." rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="newsletter" class="checkbox-input">
+                            <label for="newsletter" class="checkbox-label">Saya ingin menerima newsletter dan pembaruan dari NeoScholar</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary contact-submit">Kirim Pesan</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <h2 class="contact-title">Informasi Kontak</h2>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Alamat</h3>
+                            <p>
+                                Kampus UNESA Lidah Wetan, Jl. Lidah Wetan, Lakarsantri, Surabaya, Jawa Timur 60213.<br>
+                              </p>
+                          </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Telepon</h3>
+                            <p>+62 882 0032 33402 (WhatsApp)</p>
+                            <p>+62 812 3039 1107 (WhatsApp)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Email</h3>
+                            <p>info@neoscholar.id</p>
+                            <p>support@neoscholar.id</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Jam Operasional</h3>
+                            <p>Senin - Jumat: 07:00 - 20:00</p>
+                            <p>Sabtu: 09:00 - 20:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h3>Ikuti Kami</h3>
+                        <div class="contact-social-links">
+                            <a href="#" class="contact-social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="contact-social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="contact-social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="contact-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="contact-social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Map Section -->
+<section class="map-section section">
+    <h2 class="section-title">Lokasi Kami</h2>
+    <div class="map-container">
+        <iframe
+            class="google-map"
+            src="https://www.bing.com/maps/embed?h=400&w=800&cp=-7.30411~112.668291&lvl=14.7&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+
+    <!-- FAQ Section -->
+    <section class="faq-section section">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan Umum</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara bergabung dengan NeoScholar?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anda dapat mendaftar melalui halaman Login dengan mengklik tombol "Daftar" atau menghubungi tim kami untuk bantuan pendaftaran.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah ada biaya untuk menggunakan platform NeoScholar?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>NeoScholar menawarkan paket gratis dengan fitur terbatas dan paket berbayar dengan akses penuh ke semua fitur. Kunjungi halaman Produk untuk informasi lebih detail.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana sistem AI NeoScholar bekerja?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>AI kami menganalisis gaya belajar, kekuatan, dan kelemahan Anda melalui asesmen awal dan perilaku belajar untuk menyesuaikan materi dan metode pembelajaran yang paling efektif untuk Anda.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah NeoScholar tersedia untuk institusi pendidikan?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, kami menyediakan solusi khusus untuk sekolah, universitas, dan lembaga pendidikan lainnya. Hubungi tim sales kami untuk informasi lebih lanjut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Masih Memiliki Pertanyaan?</h2>
+                <p class="cta-text">Tim dukungan pelanggan kami siap membantu Anda 24/7</p>
+                <div class="cta-buttons">
+                    <a href="tel:+6281234567890" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Hubungi Sekarang</a>
+                    <a href="mailto:support@neoscholar.id" class="btn btn-secondary"><i class="fas fa-envelope"></i> Email Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>NeoScholar</h3>
+                    <p>Platform edukasi masa depan dengan pendekatan inovatif untuk mempersiapkan generasi penerus.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Cepat</h3>
+                    <a href="#" class="footer-link">Tentang Kami</a>
+                    <a href="#" class="footer-link">Fitur</a>
+                    <a href="#" class="footer-link">Kategori</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">FAQ</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kategori</h3>
+                    <a href="#" class="footer-link">AR/VR</a>
+                    <a href="#" class="footer-link">Robot</a>
+                    <a href="#" class="footer-link">E-book</a>
+                    <a href="#" class="footer-link">Course Online</a>
+                    <a href="#" class="footer-link">Les Privat</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <a href="#" class="footer-link"><i class="fas fa-map-marker-alt"></i> Jl. Pendidikan No. 123, Jakarta</a>
+                    <a href="#" class="footer-link"><i class="fas fa-phone"></i> +62 812 3456 7890</a>
+                    <a href="#" class="footer-link"><i class="fas fa-envelope"></i> info@neoscholar.id</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NeoScholar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+                
+                // Toggle icon
+                const icon = item.querySelector('.faq-toggle i');
+                if (item.classList.contains('active')) {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                } else {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                }
+            });
+        });
+
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && subject && message) {
+                // Here you would typically send the form data to a server
+                alert('Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.');
+                contactForm.reset();
+            } else {
+                alert('Mohon lengkapi semua field yang diperlukan.');
+            }
+        });
+    </script>
+</body>
+</html>

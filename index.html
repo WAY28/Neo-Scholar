@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoScholar - Platform Edukasi Masa Depan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="Logo NS.png" alt="NeoScholar Logo">
+                    Neo<span>Scholar</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#product" class="nav-link">Produk</a></li>
+                    <li><a href="#mentor" class="nav-link">Mentor</a></li>
+                    <li><a href="#categories" class="nav-link">Kategori</a></li>
+                    <li><a href="pendaftaranmentor.html" class="nav-link">Pendaftaran Mentor</a></li>
+                    <li><a href="jualproduk.html" class="nav-link">Jual Produk</a></li>
+                    <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+                    <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                    <li><a href="login.html" class="btn btn-primary">Login</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Your Gateway to Future Learning</h1>
+                <p class="hero-subtitle">Temukan media pembelajaran terbaik, mentor profesional, dan teknologi edukasi inovatifmu dalam satu platform ini.</p>
+                <a href="#product" class="btn btn-secondary">Explore Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section (New) -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-tabs">
+                <div class="search-tab active" data-tab="general">Cari Materi</div>
+                <div class="search-tab" data-tab="ai">Konsultasi AI</div>
+            </div>
+            
+            <div class="search-content">
+                <!-- General Search -->
+                <div class="search-panel active" id="general-search">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="search-input" placeholder="Cari materi pembelajaran, kursus, atau buku...">
+                            <button class="search-button">Cari</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Consultation Search -->
+                <div class="search-panel" id="ai-search">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-robot search-icon"></i>
+                            <input type="text" class="search-input" placeholder="Tanyakan pada AI tentang pelajaran atau konsep yang sulit...">
+                            <button class="search-button ai-button">Konsultasi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Seller Products Section (Enhanced) -->
+    <section class="bestseller section" id="product">
+        <div class="container">
+            <h2 class="section-title">Produk Best-Seller</h2>
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="Animasi2d.jpeg" alt="Produk 1" class="carousel-img">
+                            <div class="carousel-content">
+                                <h3>Video Pembelajaran Media Animasi 2D </h3>
+                                <p>Sistem pengeluaran dalam diri kita itu ada tiga.</p>
+                                <div class="product-price">Rp 1.250.000</div>
+                                <a href="#" class="btn btn-primary">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="ARstrukturbumi.jpeg" alt="Produk 2" class="carousel-img">
+                            <div class="carousel-content">
+                                <h3>AR Learning</h3>
+                                <p>Belajar struktur bumi.</p>
+                                <div class="product-price">Rp 899.000</div>
+                                <a href="#" class="btn btn-primary">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="Bgameoperasihitungan.jpeg" alt="Produk 3" class="carousel-img">
+                            <div class="carousel-content">
+                                <h3>Board Game Edukasi</h3>
+                                <p>Belajar operasi hitung bilangan.</p>
+                                <div class="product-price">Rp 1.750.000</div>
+                                <a href="#" class="btn btn-primary">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-dot active" data-index="0"></div>
+                    <div class="carousel-dot" data-index="1"></div>
+                    <div class="carousel-dot" data-index="2"></div>
+                </div>
+                <div class="carousel-arrows">
+                    <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mentors section" id="mentor">
+        <div class="container">
+            <h2 class="section-title">Mentor Profesional Kami</h2>
+            
+            <!-- Mentors Categories -->
+            <div class="mentor-categories">
+                <div class="mentor-category active" data-category="all">Semua</div>
+                <div class="mentor-category" data-category="kepelatihan">Kepelatihan</div>
+                <div class="mentor-category" data-category="keagamaan">Keagamaan</div>
+                <div class="mentor-category" data-category="mathematics">Matematika</div>
+                <div class="mentor-category" data-category="language">Bahasa</div>
+                <div class="mentor-category" data-category="manajemen">Manajemen</div>
+            </div>
+            
+            <!-- Mentors Grid -->
+            <div class="mentors-grid">
+                <!-- Language Mentors -->
+                <div class="mentor-card" data-type="language">
+                    <div class="mentor-image">
+                        <img src="debbi.jpeg" alt="Debbi Angelia Saputri">
+                    </div>
+                    <div class="mentor-info">
+                        <h3 class="mentor-name">Debbi Angelia Saputri</h3>
+                        <p class="mentor-title">Tutor Bahasa Arab</p>
+                        <p class="mentor-bio">Mahasiswi Universitas Al-Azhar Kairo, Mesir.</p>
+                        <div class="mentor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (120 ulasan)</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mentor-btn">Lihat Profil</a>
+                    </div>
+                </div>
+                
+                <div class="mentor-card" data-type="manajemen">
+                    <div class="mentor-image">
+                        <img src="jawad.jpeg" alt="Jawad At-Taqy">
+                    </div>
+                    <div class="mentor-info">
+                        <h3 class="mentor-name">Jawad At-Taqy</h3>
+                        <p class="mentor-title">Tutor Manajemen</p>
+                        <p class="mentor-bio">Mahasiswa Manajemen Universitas Brawijaya, Malang.</p>
+                        <div class="mentor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (98 ulasan)</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mentor-btn">Lihat Profil</a>
+                    </div>
+                </div>
+    
+                <!-- keagamaan Mentors -->
+                <div class="mentor-card" data-type="keagamaan">
+                    <div class="mentor-image">
+                        <img src="rere.jpeg" alt="Rere Rejo">
+                    </div>
+                    <div class="mentor-info">
+                        <h3 class="mentor-name">Rere Rejo</h3>
+                        <p class="mentor-title">Tutor Pendidikan Agama Islam</p>
+                        <p class="mentor-bio">Mahasiswa UIN Sunan Ampel, Surabaya.</p>
+                        <div class="mentor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9 (215 ulasan)</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mentor-btn">Lihat Profil</a>
+                    </div>
+                </div>
+                
+                <div class="mentor-card" data-type="language">
+                    <div class="mentor-image">
+                        <img src="ridla.jpeg" alt="Ridla Yakti Adhiningrum">
+                    </div>
+                    <div class="mentor-info">
+                        <h3 class="mentor-name">Ridla Yakti Adhiningrum</h3>
+                        <p class="mentor-title">Tutor Bahasa Turki</p>
+                        <p class="mentor-bio">Mahasiswi Universitas Kirklareli, Turkiye.</p>
+                        <div class="mentor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (85 ulasan)</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mentor-btn">Lihat Profil</a>
+                    </div>
+                </div>
+    
+                <!-- Mathematics Mentors -->
+                <div class="mentor-card" data-type="language">
+                    <div class="mentor-image">
+                        <img src="yasmin.jpeg" alt="Yasmin Zalivia Adindava">
+                    </div>
+                    <div class="mentor-info">
+                        <h3 class="mentor-name">Yasmin Zalivia Adindava</h3>
+                        <p class="mentor-title">Tutor Bahasa Inggris</p>
+                        <p class="mentor-bio">Mahasiswi Universitas Negeri Surabaya.</p>
+                        <div class="mentor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2 (72 ulasan)</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mentor-btn">Lihat Profil</a>
+                    </div>
+                </div>
+                
+                <div class="mentor-card" data-type="mathematics">
+                    <div class="mentor-image">
+                        <img src="zanoba.jpeg" alt="Zanoba Citraningtyas">
+                    </div>
+                    <div class="mentor-info">
+                        <h3 class="mentor-name">Zanoba Citraningtyas</h3>
+                        <p class="mentor-title">Tutor Calistung</p>
+                        <p class="mentor-bio">Mahasiswi Universitas Islam Negeri Walisong, Semarang.</p>
+                        <div class="mentor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7 (130 ulasan)</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mentor-btn">Lihat Profil</a>
+                    </div>
+                </div>
+    
+                <!-- Language Mentors -->
+                <div class="mentor-card" data-type="kepelatihan">
+                    <div class="mentor-image">
+                        <img src="zora.jpeg" alt="Hannun Zora Khoirunnisa">
+                    </div>
+                    <div class="mentor-info">
+                        <h3 class="mentor-name">Hannun Zora Khoirunnisa</h3>
+                        <p class="mentor-title">Tutor Persiapan UTBK</p>
+                        <p class="mentor-bio">Mahasiswi Universitas Airlangga, Surabaya.</p>
+                        <div class="mentor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.6 (168 ulasan)</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mentor-btn">Lihat Profil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories section" id="categories">
+        <div class="container">
+            <h2 class="section-title">Kategori Media Pembelajaran</h2>
+            <div class="categories-container">
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <i class="fas fa-vr-cardboard category-icon"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">AR/VR</h3>
+                        <p>Pelajari materi dengan pengalaman imersif melalui teknologi augmented dan virtual reality.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <i class="fas fa-robot category-icon"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Robot</h3>
+                        <p>Kembangkan keterampilan coding dan engineering dengan kit robot interaktif.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <i class="fas fa-book category-icon"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">E-book</h3>
+                        <p>Akses ribuan e-book premium dengan materi yang selalu diperbarui.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="categories-action">
+                <a href="kategori.html" class="btn btn-secondary">Lihat Semua Kategori</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>NeoScholar</h3>
+                    <p>Platform edukasi masa depan dengan pendekatan inovatif untuk mempersiapkan generasi penerus.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Cepat</h3>
+                    <a href="#" class="footer-link">Tentang Kami</a>
+                    <a href="#" class="footer-link">Fitur</a>
+                    <a href="#" class="footer-link">Kategori</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">FAQ</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kategori</h3>
+                    <a href="#" class="footer-link">AR/VR</a>
+                    <a href="#" class="footer-link">Robot</a>
+                    <a href="#" class="footer-link">E-book</a>
+                    <a href="#" class="footer-link">Course Online</a>
+                    <a href="#" class="footer-link">Les Privat</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <a href="#" class="footer-link"><i class="fas fa-map-marker-alt"></i> Jl. Pendidikan No. 123, Jakarta</a>
+                    <a href="#" class="footer-link"><i class="fas fa-phone"></i> +62 812 3456 7890</a>
+                    <a href="#" class="footer-link"><i class="fas fa-envelope"></i> info@neoscholar.id</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NeoScholar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Search tabs functionality
+        const searchTabs = document.querySelectorAll('.search-tab');
+        const searchPanels = document.querySelectorAll('.search-panel');
+        
+        searchTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                searchTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all panels
+                searchPanels.forEach(panel => panel.classList.remove('active'));
+                // Show the corresponding panel
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId + '-search').classList.add('active');
+            });
+        });
+        
+        // Carousel functionality
+        const carouselContainer = document.querySelector('.carousel-container');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        const carouselNext = document.querySelector('.carousel-next');
+        const carouselPrev = document.querySelector('.carousel-prev');
+        let currentIndex = 0;
+        
+        function updateCarousel() {
+            carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Update dots
+            carouselDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        carouselDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.getAttribute('data-index'));
+                updateCarousel();
+            });
+        });
+        
+        carouselNext.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % carouselDots.length;
+            updateCarousel();
+        });
+        
+        carouselPrev.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + carouselDots.length) % carouselDots.length;
+            updateCarousel();
+        });
+        
+        // Mentor filter functionality
+        const mentorCategories = document.querySelectorAll('.mentor-category');
+        const mentorCards = document.querySelectorAll('.mentor-card');
+        
+        mentorCategories.forEach(category => {
+            category.addEventListener('click', () => {
+                // Remove active class from all categories
+                mentorCategories.forEach(c => c.classList.remove('active'));
+                // Add active class to clicked category
+                category.classList.add('active');
+                
+                const selectedCategory = category.getAttribute('data-category');
+                
+                // Show/hide mentor cards based on category
+                mentorCards.forEach(card => {
+                    if (selectedCategory === 'all' || card.getAttribute('data-type') === selectedCategory) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

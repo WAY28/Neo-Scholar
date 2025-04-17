@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - NeoScholar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Neo<span>Scholar</span></a>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="#" class="nav-link">Kursus</a></li>
+                    <li><a href="#" class="nav-link">Media</a></li>
+                    <li><a href="#" class="nav-link">Jadwal</a></li>
+                    <li class="profile-dropdown">
+                        <div class="profile-dropdown-btn">
+                            <img src="https://via.placeholder.com/35" alt="Profile" class="profile-img">
+                            <span id="usernameDisplay">Pengguna</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-user dropdown-icon"></i>
+                                <span>Profil Saya</span>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-cog dropdown-icon"></i>
+                                <span>Pengaturan</span>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-shopping-cart dropdown-icon"></i>
+                                <span>Pesanan Saya</span>
+                            </a>
+                            <a href="#" id="logoutButton" class="dropdown-item">
+                                <i class="fas fa-sign-out-alt dropdown-icon"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1 class="dashboard-welcome">Selamat Datang, <span id="welcomeUsername">Pengguna</span>!</h1>
+                <p class="dashboard-subtitle">Lihat kemajuan belajarmu dan akses fitur-fitur NeoScholar dengan mudah.</p>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <!-- Riwayat Transaksi Card -->
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Riwayat Transaksi</h3>
+                        <i class="fas fa-history dashboard-card-icon"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-item">
+                            <h4 class="dashboard-item-title">Paket UTBK 2025</h4>
+                            <p class="dashboard-item-details">5 April 2025 • Rp 750.000</p>
+                        </div>
+                        <div class="dashboard-item">
+                            <h4 class="dashboard-item-title">E-Book Matematika Dasar</h4>
+                            <p class="dashboard-item-details">2 April 2025 • Rp 120.000</p>
+                        </div>
+                        <div class="dashboard-item">
+                            <h4 class="dashboard-item-title">Kit Robot Programmer Level 1</h4>
+                            <p class="dashboard-item-details">28 Maret 2025 • Rp 1.250.000</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-card-footer">
+                        <a href="#" class="dashboard-card-link">Lihat Semua Transaksi</a>
+                    </div>
+                </div>
+
+                <!-- Les Privat Card -->
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Les Privat Aktif</h3>
+                        <i class="fas fa-chalkboard-teacher dashboard-card-icon"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-item">
+                            <h4 class="dashboard-item-title">Fisika Dasar</h4>
+                            <p class="dashboard-item-details">Tutor: Ahmad Zulkifli • Rabu, 19:00 WIB</p>
+                        </div>
+                        <div class="dashboard-item">
+                            <h4 class="dashboard-item-title">Bahasa Inggris</h4>
+                            <p class="dashboard-item-details">Tutor: Sarah Johnson • Senin & Kamis, 16:30 WIB</p>
+                        </div>
+                        <div class="dashboard-item">
+                            <h4 class="dashboard-item-title">Pemrograman Python</h4>
+                            <p class="dashboard-item-details">Tutor: Budi Santoso • Sabtu, 10:00 WIB</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-card-footer">
+                        <a href="#" class="dashboard-card-link">Lihat Jadwal Lengkap</a>
+                    </div>
+                </div>
+
+                <!-- Pesan & Notifikasi Card -->
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Pesan & Notifikasi</h3>
+                        <i class="fas fa-bell dashboard-card-icon"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-item">
+                            <h4 class="dashboard-item-title">Pengumuman: Webinar AI in Education</h4>
+                            <p class="dashboard-item-details">12 April 2025 • 2 jam yang lalu</p>
+                        </div>
+                        <div class="dashboard-item">
+                            <h4 class="dashboard-item-title">Tutor: Perubahan jadwal les Fisika</h4>
+                            <p class="dashboard-item-details">8 April 2025 • 1 hari yang lalu</p>
+                        </div>
+                        <div class="dashboard-item">
+                            <h4 class="dashboard-item-title">Sistem: Update platform berhasil</h4>
+                            <p class="dashboard-item-details">5 April 2025 • 4 hari yang lalu</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-card-footer">
+                        <a href="#" class="dashboard-card-link">Lihat Semua Notifikasi</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <h3 class="quick-actions-title">Akses Cepat</h3>
+                <div class="quick-actions-grid">
+                    <a href="#" class="quick-action">
+                        <i class="fas fa-book-open quick-action-icon"></i>
+                        <span class="quick-action-text">Materi Belajar</span>
+                    </a>
+                    <a href="#" class="quick-action">
+                        <i class="fas fa-tasks quick-action-icon"></i>
+                        <span class="quick-action-text">Tugas & Quiz</span>
+                    </a>
+                    <a href="#" class="quick-action">
+                        <i class="fas fa-calendar-alt quick-action-icon"></i>
+                        <span class="quick-action-text">Jadwal Les</span>
+                    </a>
+                    <a href="#" class="quick-action">
+                        <i class="fas fa-chart-line quick-action-icon"></i>
+                        <span class="quick-action-text">Progress</span>
+                    </a>
+                    <a href="#" class="quick-action">
+                        <i class="fas fa-shopping-bag quick-action-icon"></i>
+                        <span class="quick-action-text">Toko</span>
+                    </a>
+                    <a href="#" class="quick-action">
+                        <i class="fas fa-headset quick-action-icon"></i>
+                        <span class="quick-action-text">Support</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Progress Stats (Optional additional section) -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Statistik Pembelajaran</h3>
+                    <i class="fas fa-chart-pie dashboard-card-icon"></i>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="progress-stats">
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Penyelesaian Kursus</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Quiz Terjawab</span>
+                                <span>68%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 68%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Kehadiran Les</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 92%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>NeoScholar</h3>
+                    <p>Platform edukasi masa depan dengan pendekatan inovatif untuk mempersiapkan generasi penerus.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Cepat</h3>
+                    <a href="#" class="footer-link">Dashboard</a>
+                    <a href="#" class="footer-link">Kursus</a>
+                    <a href="#" class="footer-link">Media</a>
+                    <a href="#" class="footer-link">Jadwal</a>
+                    <a href="#" class="footer-link">FAQ</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Bantuan</h3>
+                    <a href="#" class="footer-link">Pusat Bantuan</a>
+                    <a href="#" class="footer-link">Kebijakan Privasi</a>
+                    <a href="#" class="footer-link">Syarat dan Ketentuan</a>
+                    <a href="#" class="footer-link">Hubungi Kami</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <a href="#" class="footer-link"><i class="fas fa-map-marker-alt"></i> Jl. Pendidikan No. 123, Jakarta</a>
+                    <a href="#" class="footer-link"><i class="fas fa-phone"></i> +62 812 3456 7890</a>
+                    <a href="#" class="footer-link"><i class="fas fa-envelope"></i> info@neoscholar.id</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NeoScholar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Dashboard - load user info from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is logged in
+            const isLoggedIn = localStorage.getItem('userLoggedIn');
+            
+            if (!isLoggedIn) {
+                // Redirect to login page if not logged in
+                alert('Sesi Anda telah berakhir. Silakan login kembali.');
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            // Get username from localStorage
+            const username = localStorage.getItem('username') || 'Pengguna';
+            
+            // Update username on page
+            document.getElementById('usernameDisplay').textContent = username;
+            document.getElementById('welcomeUsername').textContent = username;
+            
+            // Setup logout button
+            document.getElementById('logoutButton').addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Clear login information
+                localStorage.removeItem('userLoggedIn');
+                localStorage.removeItem('username');
+                
+                // Redirect to login page
+                window.location.href = 'login.html';
+            });
+        });
+
+        // Additional CSS for progress bars that I couldn't include in the main CSS file
+        document.head.insertAdjacentHTML('beforeend', `
+            <style>
+                .progress-stats {
+                    padding: 10px 0;
+                }
+                .progress-item {
+                    margin-bottom: 20px;
+                }
+                .progress-header {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+                    font-weight: 500;
+                }
+                .progress-bar {
+                    height: 10px;
+                    background-color: #f1f1f1;
+                    border-radius: 5px;
+                    overflow: hidden;
+                }
+                .progress-fill {
+                    height: 100%;
+                    background: linear-gradient(90deg, var(--bright-teal), var(--electric-blue));
+                    border-radius: 5px;
+                }
+            </style>
+        `);
+    </script>
+</body>
+</html>
